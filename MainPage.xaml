@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="MAUI_New_UI.MainPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+    BackgroundColor="#36579b"
+    NavigationPage.HasNavigationBar="False">
+
+    <ScrollView>
+        <Grid x:Name="grdColor" BackgroundColor="White">
+            <Grid.Background>
+                <LinearGradientBrush EndPoint="0,1">
+                    <GradientStop x:Name="grdSColorTop" Offset="0.1" Color="#821f75" />
+                    <GradientStop x:Name="grdSColorBottom" Offset="1.0" Color="#edad9d" />
+                </LinearGradientBrush>
+            </Grid.Background>
+            <Grid
+                x:Name="frmSun"
+                Margin="0,0,0,-30"
+                BackgroundColor="Transparent"
+                Opacity="0.2"
+                VerticalOptions="EndAndExpand">
+                <Frame
+                    BackgroundColor="White"
+                    BorderColor="Transparent"
+                    CornerRadius="130"
+                    HasShadow="true"
+                    HeightRequest="250"
+                    Opacity="0.1"
+                    WidthRequest="250" />
+                <Frame
+                    BackgroundColor="White"
+                    BorderColor="Transparent"
+                    CornerRadius="100"
+                    HasShadow="true"
+                    HeightRequest="205"
+                    Opacity="0.2"
+                    WidthRequest="205" />
+                <Frame
+                    BackgroundColor="White"
+                    BorderColor="Transparent"
+                    CornerRadius="75"
+                    HasShadow="true"
+                    HeightRequest="150"
+                    Opacity="0.4"
+                    WidthRequest="150" />
+                <Frame
+                    BackgroundColor="White"
+                    BorderColor="Transparent"
+                    CornerRadius="50"
+                    HasShadow="true"
+                    HeightRequest="100"
+                    WidthRequest="100" />
+            </Grid>
+            <Image
+                Margin="-35,0,-35,-45"
+                Source="land_tree_light.png"
+                VerticalOptions="EndAndExpand" />
+            <StackLayout>
+                <Grid>
+                    <Frame
+                        Margin="25"
+                        BackgroundColor="White"
+                        BorderColor="Transparent"
+                        CornerRadius="5"
+                        HeightRequest="50"
+                        Opacity="0.1"
+                        VerticalOptions="StartAndExpand" />
+                    <Frame
+                        Margin="25"
+                        Padding="5"
+                        BackgroundColor="Transparent"
+                        BorderColor="Transparent"
+                        HeightRequest="50"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="StartAndExpand">
+                        <Grid>
+                            <Grid ColumnDefinitions="*,*" VerticalOptions="CenterAndExpand">
+                                <Button
+                                    Grid.Column="0"
+                                    BackgroundColor="Transparent"
+                                    Clicked="tabBtn1_Clicked"
+                                    HeightRequest="40"
+                                    Text="Morning Login"
+                                    TextColor="White"
+                                    VerticalOptions="CenterAndExpand" />
+                                <Button
+                                    Grid.Column="1"
+                                    BackgroundColor="Transparent"
+                                    Clicked="tabBtn2_Clicked"
+                                    HeightRequest="40"
+                                    Text="Night Login"
+                                    TextColor="White"
+                                    VerticalOptions="CenterAndExpand" />
+                            </Grid>
+                            <Frame
+                                x:Name="frmTab1"
+                                Margin="0,5"
+                                Padding="0"
+                                BorderColor="Transparent"
+                                CornerRadius="5"
+                                HeightRequest="40"
+                                HorizontalOptions="StartAndExpand"
+                                VerticalOptions="CenterAndExpand">
+                                <Label
+                                    x:Name="txtTab"
+                                    HorizontalOptions="CenterAndExpand"
+                                    Text="Morning Login"
+                                    TextColor="Black"
+                                    VerticalOptions="CenterAndExpand" />
+                            </Frame>
+                        </Grid>
+                    </Frame>
+                </Grid>
+                <Label
+                    Margin="25,0,0,0"
+                    FontAttributes="Bold"
+                    FontSize="30"
+                    Text="Good Morning!" />
+                <Label
+                    Margin="25,15,0,0"
+                    FontSize="11"
+                    Opacity="0.5"
+                    Text="Enter your information below" />
+
+                <Grid Margin="25,35,25,0" Padding="0">
+                    <Frame
+                        Padding="0"
+                        BackgroundColor="Black"
+                        BorderColor="Transparent"
+                        HeightRequest="45"
+                        Opacity="0.2" />
+                    <Entry
+                        Margin="15,0"
+                        Placeholder="Email"
+                        PlaceholderColor="LightGray"
+                        TextColor="White" />
+                </Grid>
+
+                <Grid Margin="25,25,25,0" Padding="0">
+                    <Frame
+                        Padding="0"
+                        BackgroundColor="Black"
+                        BorderColor="Transparent"
+                        HeightRequest="45"
+                        Opacity="0.2" />
+                    <Entry
+                        Margin="15,0"
+                        IsPassword="True"
+                        Placeholder="Password"
+                        PlaceholderColor="LightGray"
+                        TextColor="White" />
+                </Grid>
+                <Button
+                    Margin="25,35,25,0"
+                    BackgroundColor="#9598bb"
+                    FontAttributes="Bold"
+                    FontSize="16"
+                    Text="Procced" />
+            </StackLayout>
+        </Grid>
+    </ScrollView>
+
+</ContentPage>
